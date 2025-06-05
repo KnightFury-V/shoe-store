@@ -151,7 +151,6 @@ require_once 'includes/header.php';
                             </div>
                             
                             <div>
-                                <h4 class="h5">Follow Us</h4>
                                 <div class="d-flex gap-3">
                                     <a href="#" class="text-dark"><i class="fab fa-facebook-f fa-lg"></i></a>
                                     <a href="#" class="text-dark"><i class="fab fa-twitter fa-lg"></i></a>
