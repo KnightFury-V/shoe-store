@@ -1,0 +1,279 @@
+/* assets/css/cart.css */
+
+/* Cart Container */
+.cart-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Cart Header */
+.cart-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.cart-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #9b59b6);
+}
+
+/* Empty Cart Message */
+.cart-container > p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    padding: 50px 0;
+}
+
+/* Cart Table */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.cart-table thead {
+    background: linear-gradient(135deg, #f5f7fa, #e4e8eb);
+}
+
+.cart-table th {
+    padding: 15px;
+    text-align: left;
+    color: #2c3e50;
+    font-weight: 600;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.cart-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+.cart-table tr:last-child td {
+    border-bottom: none;
+}
+
+.cart-table tr:hover td {
+    background-color: #f8f9fa;
+}
+
+/* Product Image */
+.cart-table img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.cart-table img:hover {
+    transform: scale(1.05);
+}
+
+/* Product Name */
+.cart-table td:nth-child(2) {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+/* Price and Total */
+.cart-table td:nth-child(3),
+.cart-table td:nth-child(5) {
+    font-weight: 600;
+    color: #27ae60;
+}
+
+/* Quantity */
+.cart-table td:nth-child(4) {
+    color: #7f8c8d;
+}
+
+/* Action Buttons */
+.cart-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-remove {
+    background-color: #fff0f0;
+    color: #e74c3c;
+    border: 1px solid #ffd1d1;
+}
+
+.btn-remove:hover {
+    background-color: #ffecec;
+    color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(231, 76, 60, 0.2);
+}
+
+/* Cart Summary */
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.cart-summary h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+}
+
+.cart-summary .btn-checkout {
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.cart-summary .btn-checkout:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cart-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .cart-table thead {
+        display: none;
+    }
+    
+    .cart-table tr {
+        display: block;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .cart-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+    
+    .cart-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #7f8c8d;
+        margin-right: 15px;
+    }
+    
+    .cart-actions {
+        justify-content: flex-end;
+    }
+    
+    .cart-summary {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Notification Styles */
+#notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    max-width: 350px;
+}
+
+.notification {
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    animation: slideIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.notification.success {
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    border-left: 4px solid #2E7D32;
+}
+
+.notification .close-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+/* Empty Cart Styles */
+.empty-cart {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Table Responsiveness */
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.btn-continue {
+    background: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.btn-continue:hover {
+    background: #e9ecef;
+}
+
+.cart-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Add other existing cart styles here */

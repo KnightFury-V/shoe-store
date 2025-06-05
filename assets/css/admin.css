@@ -1,0 +1,424 @@
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(90deg, #0e4886 10%, #d67f38 90%);
+    color: #fff;
+    padding: 2em 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+
+/* Login Page Styles */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0e4886;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"],
+.login-container button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    background-color: #f8f9fa;
+}
+
+.login-container button {
+    background: linear-gradient(90deg, #0e4886 10%, #d67f38 90%);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+}
+
+.login-container button:hover {
+    background: linear-gradient(90deg, #d67f38 10%, #0e4886 90%);
+    transform: scale(1.05);
+}
+
+.error {
+    color: red;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+/* Center Form Styles */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .login-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .login-container input[type="email"],
+    .login-container input[type="password"],
+    .login-container button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .login-container input[type="email"],
+    .login-container input[type="password"],
+    .login-container button {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+}
+
+
+/* Active Link Styling */
+header nav ul li a.active {
+    background: linear-gradient(90deg, #0e4886 10%, #d67f38 90%);
+    color: #fff;
+}
+
+/* Page Titles */
+h1, h2, h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0e4886;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 8px 15px;
+    background: linear-gradient(90deg, #0e4886 10%, #d67f38 90%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #d67f38 10%, #0e4886 90%);
+    transform: scale(1.05);
+}
+
+.btn.danger {
+    background-color: #dc3545;
+}
+
+.btn.danger:hover {
+    background-color: #a71d2a;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+    color: #000;
+    border: 1px solid #999;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.cancel-btn:hover {
+    background-color: #bbb;
+}
+
+/* Forms */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.form label {
+    font-weight: bold;
+    color: #0e4886;
+}
+
+.form input,
+.form textarea,
+.form select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form input.error,
+.form textarea.error,
+.form select.error {
+    border-color: #dc3545;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background: linear-gradient(90deg, #0e4886 10%, #d67f38 90%);
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.stat-card {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.stat-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.stat-card p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0e4886;
+}
+
+/* Chart Section */
+.chart-container {
+    display: flex;
+    flex-direction: column; /* Stack the heading and chart vertically */
+    align-items: center; /* Center-align the heading and chart */
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    text-align: center;
+}
+
+.chart-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px; /* Add spacing between the heading and chart */
+    color: #333;
+    text-align: center; /* Ensure the heading is centered */
+}
+
+.modal {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    background-color: #0e4886;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #d67f38;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .chart-container {
+        width: 100%;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    table th,
+    table td {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .stat-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .stat-card p {
+        font-size: 1.5rem;
+    }
+
+    .form label {
+        font-size: 0.9rem;
+    }
+}

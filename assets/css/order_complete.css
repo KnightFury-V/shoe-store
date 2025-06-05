@@ -1,0 +1,93 @@
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #0e4886;
+}
+
+p {
+    text-align: center;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Success Message Styles */
+.success {
+    text-align: center;
+    color: #0e4886;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* Form Container */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+/* Label Styles */
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Select Dropdown Styles */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+select:focus {
+    border-color: #0e4886;
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    background-color: #0e4886;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #d67f38;
+}
+
+/* Back to Home Link */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #0e4886;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #d67f38;
+}

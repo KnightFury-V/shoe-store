@@ -1,0 +1,99 @@
+/* Notification Styles */
+#notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    max-width: 350px;
+}
+
+.notification {
+    position: relative;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.notification.success {
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    border-left: 5px solid #2E7D32;
+}
+
+.notification.error {
+    background: linear-gradient(135deg, #f44336, #ef5350);
+    border-left: 5px solid #c62828;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.notification-icon {
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.notification-message {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.notification-close {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 15px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.notification-close:hover {
+    opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeOutRight {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(50px); }
+}
+
+.animated {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.fadeInRight {
+    animation-name: fadeInRight;
+}
+
+.fadeOutRight {
+    animation-name: fadeOutRight;
+}
+
+/* Add to cart animation */
+.product-card.added-to-cart {
+    box-shadow: 0 0 0 2px #4CAF50;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Cart count update animation */
+.cart-count.updated {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
