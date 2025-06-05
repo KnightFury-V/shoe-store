@@ -1,0 +1,60 @@
+about.php
+admin_test_cases.php
+admin_test_log.txt
+cart.php
+checkout.php
+composer.json
+composer.lock
+contact.php
+cookie.txt
+faq.php
+index.php
+order_complete.php
+privacy_policy.php
+README.md
+search.php
+shoeshopdb.sql
+size-guide.php
+term.php
+test_logs.txt
+test-result.txt
+update_cart.php
+view_cart.php
+
+Subdirectories
+admin/
+add_category.php
+add_product.php
+admin_header.php
+categories.php
+dashboard.php
+delete_category.php
+delete_order.php
+Other admin-related files...
+
+assets/
+video1.mp4
+Other static assets...
+
+includes/
+header.php
+footer.php
+config.php
+database.php
+functions.php
+Other shared components...
+
+products/
+product.php
+Other product-related files...
+
+tests/
+unit/
+integration/
+Other test-related files...
+
+user/
+profile.php
+register.php
+wishlist.php
+Other user-related files...
